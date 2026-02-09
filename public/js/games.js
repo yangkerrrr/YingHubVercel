@@ -188,7 +188,7 @@ Promise.allSettled([
     searchInput.placeholder = `Search for ${allGames.length} games`;
     applyFilters();
 
-    fetch("/json/games.json")
+    fetch("/json/games-local.json")
       .then((response) => response.json())
       .then((cdnGames) => {
         allGames = [...allGames, ...cdnGames];
