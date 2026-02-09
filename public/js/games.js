@@ -129,34 +129,15 @@ function renderGames(games) {
     name.textContent = game.name;
     gameItem.appendChild(name);
 
-    if (game.proxy) {
-      img.onclick = (e) => {
-        e.preventDefault();
-        if (game.url.includes("jsdelivr")) {
-          sessionStorage.setItem("lpurl", game.url);
-          window.location.href = "/go";
-        } else {
-          if (localStorage.getItem("proxy-backend") === "ultraviolet") {
-            sessionStorage.setItem(
-              "lpurl",
-              __uv$config.prefix + __uv$config.encodeUrl(game.url)
-            );
-            sessionStorage.setItem("rawurl", game.url);
-            window.location.href = "/go";
-          } else {
-            const tmp = window.sjEncodeAndGo(game.url);
-            sessionStorage.setItem("lpurl", tmp);
-            window.location.href = "/go";
-          }
-        }
-      };
-    } else {
-      img.onclick = (e) => {
-        e.preventDefault();
-        sessionStorage.setItem("lpurl", game.url);
-        window.location.href = "/go";
-      };
-    }
+    img.onclick = (e) => {
+  e.preventDefault();
+
+  // build player URL with argument
+  const playerUrl = `https://yangkerrrr.github.io/YingHub/${encodeURIComponent(game.url)}`;
+
+  window.location.href = playerUrl;
+};
+
 
     gamesList.appendChild(gameItem);
   });
