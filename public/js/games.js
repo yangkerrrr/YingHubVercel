@@ -1,5 +1,5 @@
 console.log(
-  `YingHub(pls work daddy)  v7 - games.js Loaded`,
+  `YingHub(pls wwwwork daddy)  v7 - games.js Loaded`,
   "font-size: 16px; background-color: #9282fb; border-top-left-radius: 5px; border-bottom-left-radius: 5px; padding: 4px; font-weight: bold;",
   "font-size: 16px; background-color: #090810; font-weight: bold; padding: 4px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;"
 );
