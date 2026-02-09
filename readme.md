@@ -1,8 +1,8 @@
 <div align=center>
 
 <img src="./public/media/logo.svg" height="60px">
-<h1>Lunaar V7</h1>
-<h4 align="center">the best unblocked proxy.</h4>
+<h1>YingHub V7</h1>
+<h4 align="center">the best unblocked  site.</h4>
 
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1dh3v.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 
@@ -13,25 +13,19 @@
 > [!IMPORTANT]
 > If you fork Lunaar, please give it a star.
 
-Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
+Join our [Discord Server](example.com) for links and more!
 
 ## V7 Features
 
 - Modern UI
 - Fast Built-in Proxy
-- 350+ Built-in Games
+- multiple Built-in Games
 - Theme Support
 - AI Chatbot
 - Inspect element
-- Tab cloaker [(Using cloakjs)](https://github.com/Parcoil/cloak)
+- Tab cloaker
 - Panic Key
 - And much more!
-
-## Demo
-
-[lunaar.org](https://lunaar.org) [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1dh3v.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
-
-[Lunaar Docs](https://docs.lunaar.org)
 
 ## Deployment
 
@@ -42,7 +36,7 @@ Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
 
 [Click here to host lunaar](https://github.com/parcoil/lunaar-deploy)
 
-# 🤖 Luna AI
+# 🤖 Ying AI
 
 ### 1. Get a Groq API Key
 
@@ -61,7 +55,3 @@ GROQ_API_KEY=your_actual_groq_api_key_here
 ```
 
 ## Issues
-
-> [!NOTE]
-> If you encounter issues, create an [issue on GitHub](https://github.com/parcoil/lunaar.org/issues/new) or join the [Discord Server](https://dsc.gg/parcoil).
-> we like audis and they are better tha all the german auto makers, including the ones in VW audi group.
