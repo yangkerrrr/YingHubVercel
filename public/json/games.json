@@ -9,154 +9,154 @@
   {
     "name": "Soccer Random",
     "image": "https://www.superliquidsoccer.ca/wp-content/uploads/2025/09/Soccer-Random-Online.webp",
-    "url": "player.html?dir=game/soccerrandom",
+    "url": "soccerrandom",
     "proxy": false,
     "new": false
   },
   {
     "name": "Chrome Dino",
     "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Dino_non-birthday_version.gif",
-    "url": "player.html?dir=game/chromedino",
+    "url": "chromedino",
     "proxy": false,
     "new": false
   },
   {
     "name": "Hollow Knight",
     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg?t=1764916620",
-    "url": "player.html?dir=game/hollowknight",
+    "url": "hollowknight",
     "proxy": false,
     "new": false
   },
   {
     "name": "Basketball Random",
     "image": "https://i.ytimg.com/vi/x_aLQffXUfw/maxresdefault.jpg",
-    "url": "player.html?dir=game/basketrandom",
+    "url": "basketrandom",
     "proxy": false,
     "new": false
   },
   {
     "name": "Terraria",
     "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/105600/capsule_616x353.jpg?t=1769844435",
-    "url": "player.html?dir=game/terraria",
+    "url": "terraria",
     "proxy": false,
     "new": false
   },
   {
     "name": "PolyTrack",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPQOK9YGGA9TE7NvnOjobjubrIKwunG3IG8w&s",
-    "url": "player.html?dir=game/polytrack",
+    "url": "polytrack",
     "proxy": false,
     "new": false
   },
   {
     "name": "Crazy Cattle 3D",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX74ApFMTfcDasMpkdYEBYD2g17quYgt0Dnw&s",
-    "url": "player.html?dir=game/crazycattle",
+    "url": "crazycattle",
     "proxy": false,
     "new": false
   },
   {
     "name": "Flappy Bird",
     "image": "https://img.itch.zone/aW1nLzE2NDA0NTcxLnBuZw==/508x254%23mb/ptK5rH.png",
-    "url": "player.html?dir=game/flappybird",
+    "url": "flappybird",
     "proxy": false,
     "new": false
   },
   {
     "name": "Balatro",
     "image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Balatro_cover.jpg/250px-Balatro_cover.jpg",
-    "url": "player.html?dir=game/balatro",
+    "url": "balatro",
     "proxy": false,
     "new": false
   },
   {
     "name": "ULTRAKILL",
     "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1229490/capsule_616x353.jpg?t=1764923042",
-    "url": "player.html?dir=game/ultrakill",
+    "url": "ultrakill",
     "proxy": false,
     "new": false
   },
   {
     "name": "GTA Vice City",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW2uBr-3kJxlOgj-op6KTXftlVeFMVQ7UAmg&s",
-    "url": "player.html?dir=game/gtavice",
+    "url": "gtavice",
     "proxy": false,
     "new": false
   },
   {
     "name": "Half Life (source 1:1)",
     "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/70/capsule_616x353.jpg?t=1745368462",
-    "url": "player.html?dir=game/halflife",
+    "url": "halflife",
     "proxy": false,
     "new": false
   },
   {
     "name": "Tony Hawk's Pro Skater",
     "image": "https://www.techspot.com/images/products/2020/pc-games/org/2020-09-03-product-2.jpg",
-    "url": "player.html?dir=game/skate1",
+    "url": "skate1",
     "proxy": false,
     "new": false
   },
   {
     "name": "Minecraft 1.5.2",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfjCUYhSDWjYzaM8Yk8EhJWG-Jjfnj0cW6ZA&s",
-    "url": "player.html?dir=game/minecraft1.5.2",
+    "url": "minecraft1.5.2",
     "proxy": false,
     "new": false
   },
   {
     "name": "Karlson",
     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1228610/capsule_616x353.jpg?t=1649362618",
-    "url": "player.html?dir=game/karlson",
+    "url": "karlson",
     "proxy": false,
     "new": false
   },
   {
     "name": "Pac-Man",
     "image": "https://lh3.googleusercontent.com/H8hhcUas7f9Pi4aMLTQfSTVk1wwE1d_SPYYGldXn9S8GARJis2ED4EpnIfXzfBhTP8KZM64bFnmgowpU3Ct7b7OznwcRakNOM3mB2KRr=s660",
-    "url": "player.html?dir=game/pacman",
+    "url": "pacman",
     "proxy": false,
     "new": false
   },
   {
     "name": "Celeste",
     "image": "https://image.api.playstation.com/cdn/EP2120/CUSA11235_00/QIi3jKznLkAGV7iXnMhVMOw1F9tROkIC.jpg",
-    "url": "player.html?dir=game/celeste",
+    "url": "celeste",
     "proxy": false,
     "new": false
   },
   {
     "name": "Tetris",
     "image": "https://static-cdn.jtvnw.net/jtv_user_pictures/056439ab-0198-403e-90b2-2e52f71b8644-profile_banner-480.png",
-    "url": "player.html?dir=game/tetris",
+    "url": "tetris",
     "proxy": false,
     "new": false
   },
   {
     "name": "Raft",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuygx1rKMTpiM1IHCbv91FSgzBmmxZOi6Wcw&s",
-    "url": "player.html?dir=game/raft",
+    "url": "raft",
     "proxy": false,
     "new": false
   },
   {
     "name": "Snake",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-3C_hdQO024cBsXdR1ywmADIIzJgsrlbg-w&s",
-    "url": "player.html?dir=game/snake",
+    "url": "snake",
     "proxy": false,
     "new": false
   },
   {
     "name": "Binding of Isaac",
     "image": "https://oyster.ignimgs.com/wordpress/stg.ign.com/2014/11/Isaac1600.jpg",
-    "url": "player.html?dir=game/bindingofisaac",
+    "url": "bindingofisaac",
     "proxy": false,
     "new": false
   },
   {
     "name": "Super Mario 64",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbGTvGvk4uenNmbJm4RueU96gCSdFB6xosWA&s",
-    "url": "player.html?dir=game/supermario64",
+    "url": "supermario64",
     "proxy": false,
     "new": false
   }

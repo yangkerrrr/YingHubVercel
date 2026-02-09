@@ -133,7 +133,7 @@ function renderGames(games) {
   e.preventDefault();
 
   // build player URL with argument
-  const playerUrl = `https://yangkerrrr.github.io/YingHwub/player.html?dir=${encodeURIComponent(game.url)}`;
+  const playerUrl = `https://yangkerrrr.github.io/YingHwub/player.html?dir=game/${encodeURIComponent(game.url)}`;
 
   window.location.href = playerUrl;
 };
