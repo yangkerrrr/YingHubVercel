@@ -1,4 +1,4 @@
-const logo = "\x1b[91m[Parcoil Cloak]\x1b[0m";
+const logo = "\x1b[91m[stolen Cloak]\x1b[0m";
 
 const cloak = {
   getFavicon() {

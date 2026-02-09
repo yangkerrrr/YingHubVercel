@@ -340,7 +340,7 @@ function downloadBrowserBackup() {
 
   const link = document.createElement("a");
   link.href = url;
-  link.download = "backup.luna";
+  link.download = "backup.yingnetwork";
   link.click();
 
   URL.revokeObjectURL(url);
@@ -376,7 +376,7 @@ function importBrowserBackup(encoded) {
 function uploadBrowserBackup() {
   const input = document.createElement("input");
   input.type = "file";
-  input.accept = ".luna";
+  input.accept = ".yingnetwork";
 
   input.addEventListener("change", (e) => {
     const file = e.target.files[0];

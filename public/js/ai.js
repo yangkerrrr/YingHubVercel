@@ -1,4 +1,4 @@
-// luna ai goes crazy
+
 class AIChatbot {
   constructor() {
     this.conversationHistory = [];
@@ -90,7 +90,7 @@ class AIChatbot {
       return data.response;
     } catch (error) {
       if (error.name === "TypeError" && error.message.includes("fetch")) {
-        throw new Error("Network error: Unable to connect to the server");
+        throw new Error("Network error: Unable to connect to the Yingnetwork server");
       }
       throw error;
     }
@@ -229,7 +229,7 @@ class AIChatbot {
       Toastify({
         text: isOnline
           ? "Luna AI is online"
-          : "⚠️ Luna AI is offline or API key missing Join our discord for help",
+          : "⚠️ Ying Ai is offline or security key is blocked Join our discord for help",
         duration: 4000,
         gravity: "top",
         position: "right",
