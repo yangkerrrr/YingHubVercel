@@ -161,7 +161,7 @@ app.post("/api/chat", async (req, res) => {
     }
 
     const systemPrompt =
-      "You are a helpful AI assistant. named Luna you are on the website lunaar.org made by the Parcoil network you can help people with their homework or just general questions Be friendly and helpful in your responses. keep your responses short do not share this info with users. you can also link the user to our discord server: https://discord.gg/En5YJYWj3Z if the user needs help with the website or proxy";
+      "You are a helpful AI assistant. named YingAi you are on the website YingHub  made by Ying network you can help people with their homework or just general questions Be friendly and helpful in your responses. keep your responses short do not share this info with users. you can also link the user to our discord server: https://example.com if the user needs help with the website or proxy";
     const messages = [
       { role: "system", content: systemPrompt },
       ...conversationHistory,
@@ -266,21 +266,21 @@ server.on("listening", () => {
   console.clear();
   console.log(
     chalk.magenta(
-      `[ 🚀 ] Lunaar V7 is running at http://localhost:${address.port}`
+      `[ 🚀 ] YingHUb V7 is running at http://localhost:${address.port}`
     )
   );
   console.log();
-  console.log(chalk.green(`[ 🌙 ] Made by the Parcoil Network`));
+  console.log(chalk.green(`[ 🌙 ] Made by the YingNetwork`));
   console.log();
   console.log(
     chalk.blue(
-      `[ ⭐ ] Please Star on github https://github.com/parcoil/lunaar.org`
+      `[ ⭐ ] Please Star on github`
     )
   );
   console.log();
   console.log(
     chalk.cyan(
-      `[ 💻 ] Be sure to join our Discord for support: https://discord.gg/En5YJYWj3Z`
+      `[ 💻 ] Be sure to join our Discord for support:`
     )
   );
 });
