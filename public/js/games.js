@@ -8,6 +8,7 @@ let allGames = [];
 
 function applyFilters() {
   let filtered = allGames;
+
   const showProxy = document
     .getElementById("proxy-btn")
     .classList.contains("active");
@@ -33,28 +34,36 @@ function applyFilters() {
   const searchValue = document
     .getElementById("search-input")
     .value.toLowerCase();
+
   if (searchValue) {
     filtered = filtered.filter((game) =>
       game.name.toLowerCase().includes(searchValue)
     );
   }
+
   const searchInput = document.getElementById("search-input");
   if (searchInput) {
-    searchInput.placeholder = `Search for ${filtered.length} game${filtered.length !== 1 ? "s" : ""}`;
+    searchInput.placeholder = `Search for ${filtered.length} game${
+      filtered.length !== 1 ? "s" : ""
+    }`;
   }
+
   renderGames(filtered);
 }
 
 function renderGames(games) {
   const gamesList = document.getElementById("games-list");
+
   if (!gamesList) {
     console.error('Element with id "games-list" not found.');
     return;
   }
+
   gamesList.innerHTML = "";
+
   if (games.length === 0) {
     gamesList.innerHTML =
-      '<p style="color:var(--text-color);opacity:0.7;"><i <i class="fa-solid fa-circle-exclamation"></i> No games found.</p>';
+      '<p style="color:var(--text-color);opacity:0.7;"><i class="fa-solid fa-circle-exclamation"></i> No games found.</p>';
     return;
   }
 
@@ -62,11 +71,9 @@ function renderGames(games) {
     if (a.name === "Request a game") return -1;
     if (b.name === "Request a game") return 1;
 
-    // new games first
     if (a.new && !b.new) return -1;
     if (!a.new && b.new) return 1;
 
-    // then hot games
     if (a.top && !b.top) return -1;
     if (!a.top && b.top) return 1;
 
@@ -76,18 +83,16 @@ function renderGames(games) {
   sortedGames.forEach((game, idx) => {
     const gameItem = document.createElement("div");
     gameItem.className = "game-item";
-    // Add staggered animation delay
     gameItem.style.setProperty("--item-delay", `${idx * 0.03}s`);
 
     const img = document.createElement("img");
     img.alt = game.name;
     img.loading = "lazy";
+
     if (game.proxy) {
-      if (game.image.startsWith("https://")) {
-        img.src = game.image;
-      } else {
-        img.src = `/media/games/${game.image}`;
-      }
+      img.src = game.image.startsWith("https://")
+        ? game.image
+        : `/media/games/${game.image}`;
     } else {
       if (game.image.startsWith("https://")) {
         img.src = game.image;
@@ -96,54 +101,68 @@ function renderGames(games) {
         img.src = `/cdn/${firstSegment}/${game.image}`;
       }
     }
+
     gameItem.appendChild(img);
+
     const badgeContainer = document.createElement("div");
     badgeContainer.className = "badge-container";
     gameItem.appendChild(badgeContainer);
+
     if (game.top) {
       const badge = document.createElement("span");
       badge.innerHTML = `<i class="fa-solid fa-fire"></i> HOT`;
       badge.className = "badge";
       badgeContainer.appendChild(badge);
     }
+
     if (game.new) {
       const badge = document.createElement("span");
       badge.innerHTML = `<i class="fa-solid fa-sparkles"></i> NEW`;
       badge.className = "badge";
       badgeContainer.appendChild(badge);
     }
+
     if (game.exp) {
       const badge = document.createElement("span");
       badge.innerHTML = `<i class="fa-solid fa-vial"></i> EXP`;
       badge.className = "badge";
       badgeContainer.appendChild(badge);
     }
+
     if (game.updated) {
       const badge = document.createElement("span");
       badge.innerHTML = `<i class="fa-solid fa-sparkles"></i> UPDATED`;
       badge.className = "badge";
       badgeContainer.appendChild(badge);
     }
+
     const name = document.createElement("p");
     name.className = "game-link";
     name.textContent = game.name;
     gameItem.appendChild(name);
 
+    // ✅ CLICK LOGIC
     img.onclick = (e) => {
-  e.preventDefault();
+      e.preventDefault();
 
-  // build player URL with argument
-  const playerUrl = `https://ying-hub-vercel.vercel.app/html/player.html?dir=game/${encodeURIComponent(game.url)}`;
+      const url = game.url;
 
-  window.location.href = playerUrl;
-};
+      // External links open in new tab
+      if (url.startsWith("http://") || url.startsWith("https://")) {
+        window.open(url, "_blank");
+        return;
+      }
 
+      // Local games go to player.html
+      const playerUrl = `/player?dir=game/${encodeURIComponent(url)}`;
+      window.location.href = playerUrl;
+    };
 
     gamesList.appendChild(gameItem);
   });
 }
 
-// Load local games first
+// Load games
 Promise.allSettled([
   fetch("json/games.json").then((response) => response.json()),
   fetch("json/games-local.json").then((response) => response.json()),
@@ -165,11 +184,12 @@ Promise.allSettled([
     }
 
     allGames = [...gamesData1, ...gamesData2];
+
     const searchInput = document.getElementById("search-input");
     searchInput.placeholder = `Search for ${allGames.length} games`;
     applyFilters();
 
-    fetch("/json/games-lolcal.json")
+    fetch("/json/games-local.json")
       .then((response) => response.json())
       .then((cdnGames) => {
         allGames = [...allGames, ...cdnGames];
@@ -177,14 +197,13 @@ Promise.allSettled([
         applyFilters();
       })
       .catch((error) => {
-        console.error("Error loading /cdn/all:", error);
+        console.error("Error loading CDN games:", error);
         alert("Failed to load additional games from CDN.");
-        // CDN failed, but local games are already loaded
       });
   })
   .catch((error) => {
     console.error("Unexpected error loading local games:", error);
-    // Fallback to just games.json if local fails
+
     fetch("json/games.json")
       .then((response) => response.json())
       .then((data) => {
