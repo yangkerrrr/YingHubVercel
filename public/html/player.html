@@ -1,94 +1,93 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Player - YingHub</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player - YingHub</title>
 
-    <link rel="icon" href="../media/logo.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
-    />
-    <link rel="stylesheet" type="text/css" href="../css/toastify.min.css" />
-    <script src="../js/cloak.js"></script>
-  </head>
+  <link rel="icon" href="../media/logo.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
+  <link rel="stylesheet" type="text/css" href="../css/toastify.min.css" />
 
-  <body>
-    <div class="navbar-container"></div>
+  <script src="../js/cloak.js"></script>
 
-    <div id="blobs">
-      <div class="gradiant"></div>
-      <div class="gradiant2"></div>
-      <div class="gradiant3"></div>
-    </div>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
 
-    <div id="particles-js"></div>
+    .navbar-container {
+      position: relative;
+      z-index: 1000;
+      height: 60px; /* adjust if your navbar is taller */
+    }
 
-    <!-- Game title -->
-    <h1 id="gameTitle">Loading game...</h1>
+    #gameContainer {
+      position: absolute;
+      top: 60px; /* same as navbar height */
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
 
-    <!-- Game iframe -->
-    <div style="width:100%; height:100vh; padding:10px;">
-      <iframe
-        id="gameFrame"
-        style="width:100%; height:100%; border:none; border-radius:12px; background:black;"
-        allowfullscreen
-      ></iframe>
-    </div>
+    #gameFrame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: black;
+    }
+  </style>
+</head>
 
-    <div class="footer">
-      <a href="https://github.com/yangkerrrr/YingHubVercel" class="link">Github</a>
-      <a href="example.com" class="link">Discord</a>
-    </div>
+<body>
+  <!-- Navbar -->
+  <div class="navbar-container"></div>
 
-    <!-- Scripts -->
-    <script src="../js/toastify-js.js"></script>
-    <script src="../js/sweetalert2.js"></script>
-    <script src="../js/nav.js"></script>
-    <script src="../js/main.js"></script>
+  <!-- Game iframe -->
+  <div id="gameContainer">
+    <iframe id="gameFrame" allowfullscreen></iframe>
+  </div>
 
-    <script src="/sj/register-sw.js" defer></script>
-    <script src="/sj/search.js" defer></script>
-    <script src="/sj/index.js" defer></script>
-    <script src="/scram/scramjet.all.js"></script>
-    <script src="/baremux/index.js" defer></script>
-    <script src="/uv/uv.bundle.js" defer></script>
-    <script src="/uv/uv.config.js" defer></script>
-    <script src="/uv/register-sw.js" defer></script>
-    <script src="/uv/search.js" defer></script>
-    <script src="/uv/proxy.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Scripts -->
+  <script src="../js/toastify-js.js"></script>
+  <script src="../js/sweetalert2.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
 
-    <div class="panic-btn-div" id="panicDiv">
-      <button id="panicBtn">Panic</button>
-    </div>
+  <script src="/sj/register-sw.js" defer></script>
+  <script src="/sj/search.js" defer></script>
+  <script src="/sj/index.js" defer></script>
+  <script src="/scram/scramjet.all.js"></script>
+  <script src="/baremux/index.js" defer></script>
+  <script src="/uv/uv.bundle.js" defer></script>
+  <script src="/uv/uv.config.js" defer></script>
+  <script src="/uv/register-sw.js" defer></script>
+  <script src="/uv/search.js" defer></script>
+  <script src="/uv/proxy.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <!-- 🔥 GAME LOADER SCRIPT -->
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const dir = params.get("dir"); // example: game/terraria
+  <div class="panic-btn-div" id="panicDiv">
+    <button id="panicBtn">Panic</button>
+  </div>
 
-      const iframe = document.getElementById("gameFrame");
-      const title = document.getElementById("gameTitle");
+  <!-- GAME LOADER SCRIPT -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const dir = params.get("dir"); // example: game/terraria
+    const iframe = document.getElementById("gameFrame");
 
-      if (!dir) {
-        title.textContent = "No game specified";
-      } else {
-        // remove "game/"
-        const folder = dir.replace(/^game\//, "");
-
-        const gameUrl = `https://yangkerrrr.github.io/YingHub/game/${folder}/`;
-
-        iframe.src = gameUrl;
-
-        title.textContent = folder
-          .replace(/-/g, " ")
-          .replace(/\b\w/g, c => c.toUpperCase());
-      }
-    </script>
-  </body>
+    if (!dir) {
+      alert("No game specified");
+    } else {
+      const folder = dir.replace(/^game\//, "");
+      const gameUrl = `https://yangkerrrr.github.io/YingHub/game/${folder}/`;
+      iframe.src = gameUrl;
+    }
+  </script>
+</body>
 </html>
-S
