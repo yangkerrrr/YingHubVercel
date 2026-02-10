@@ -2,7 +2,7 @@
   {
     "name": "Boxing Random",
     "image": "https://i.ytimg.com/vi/Z1MKjS72IWQ/maxresdefault.jpg",
-    "url": "game/boxingrandom",
+    "url": "boxingrandom",
     "proxy": false,
     "new": false
   },
