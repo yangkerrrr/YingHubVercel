@@ -11,7 +11,7 @@
 ![Lunaar image](https://api.microlink.io/?url=https%3A%2F%2Flunaar.org&screenshot=true&embed=screenshot.url)
 
 > [!IMPORTANT]
-> If you fork Lunaar, please give it a star.
+> If you fork YingHub V7, please give it a star.
 
 Join our [Discord Server](example.com) for links and more!
 
@@ -30,11 +30,7 @@ Join our [Discord Server](example.com) for links and more!
 ## Deployment
 
 > [!IMPORTANT]
-> You cannot deploy Lunaar to a static host, such as GitHub Pages or Cloudflare Pages.
-
-## Deploying your own version of lunaar
-
-[Click here to host lunaar](https://github.com/parcoil/lunaar-deploy)
+> You cannot deploy Ying to a static host, such as GitHub Pages or Cloudflare Pages.
 
 # 🤖 Ying AI
 
