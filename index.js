@@ -228,6 +228,9 @@ app.get("/go", (req, res) => {
 app.get("/new", (req, res) => {
   res.sendFile(join(__dirname, publicPath, "html", "new.html"));
 });
+app.get("/player", (req, res) => {
+  res.sendFile(join(__dirname, publicPath, "html", "player.html"));
+});
 app.get("/more", (req, res) => {
   res.sendFile(join(__dirname, publicPath, "html", "more.html"));
 });
