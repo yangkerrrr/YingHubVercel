@@ -49,6 +49,13 @@
     "new": false
   },
   {
+    "name": "Quake III Arena",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/263.png",
+    "url": "quake",
+    "proxy": false,
+    "new": true
+  },
+  {
     "name": "Terraria",
     "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/105600/capsule_616x353.jpg?t=1769844435",
     "url": "terraria",
