@@ -1,8 +1,8 @@
 [
   {
     "name": "Request a game",
-    "image": "gforms.webp",
-    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-3YSchRvZwt4DQPNnlFZcL__Y2O1tGrrgw&s",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-3YSchRvZwt4DQPNnlFZcL__Y2O1tGrrgw&s",
+    "url": "https://forms.gle/5JKgX9EQp61oeATK7",
     "new": false,
     "top": true,
     "proxy": false
