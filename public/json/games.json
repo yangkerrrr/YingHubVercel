@@ -21,6 +21,13 @@
     "new": false
   },
   {
+    "name": "Getting over it",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpqRs1pTLcIiA4-1EQeRTNuTsnd3IghFHXQ&s",
+    "url": "goi",
+    "proxy": false,
+    "new": true
+  },
+  {
     "name": "YangJS Emulator",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbpOa3Y62wNQ-214jqI8vxXqsCHJ91LdRnwg&s",
     "url": "emulator",
