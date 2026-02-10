@@ -133,7 +133,7 @@ function renderGames(games) {
   e.preventDefault();
 
   // build player URL with argument
-  const playerUrl = `https://ying-hub-vercel.vercel.app/player?dir=game/${encodeURIComponent(game.url)}`;
+  const playerUrl = `https://ying-hub-vercel.vercel.app/html/player.html?dir=game/${encodeURIComponent(game.url)}`;
 
   window.location.href = playerUrl;
 };
