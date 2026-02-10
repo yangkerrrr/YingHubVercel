@@ -228,7 +228,7 @@ class AIChatbot {
 
       Toastify({
         text: isOnline
-          ? "Luna AI is online"
+          ? "Ying AI is online"
           : "⚠️ Ying Ai is offline or security key is blocked Join our discord for help",
         duration: 4000,
         gravity: "top",
@@ -245,7 +245,7 @@ class AIChatbot {
       console.error("AI status check failed:", err);
 
       Toastify({
-        text: "⚠️ Luna AI status check failed",
+        text: "⚠️ Ying AI status check failed",
         duration: 3000,
         gravity: "top",
         position: "right",
