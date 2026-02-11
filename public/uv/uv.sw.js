@@ -502,7 +502,7 @@
           </div>
           
           <div class="error-footer">
-            <i>\u004C\u0075\u006E\u0061\u0061\u0072 V7 Ultraviolet v<span id="uvVersion"></span> (build <span id="uvBuild"></span>)</i>
+            <i>YingHub V7 Ultraviolet v<span id="uvVersion"></span> (build <span id="uvBuild"></span>)</i>
           </div>
         </div>
         <script src="${
