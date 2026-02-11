@@ -63,6 +63,13 @@
     "new": false
   },
   {
+    "name": "Five Nighs at Epsteins",
+    "image": "https://static01.nyt.com/images/2021/12/01/nyregion/01maxwell-trial-epstein-suicide01/01maxwell-trial-epstein-suicide01-mediumSquareAt3X.jpg",
+    "url": "epstein",
+    "proxy": false,
+    "new": false
+  },
+  {
     "name": "PolyTrack",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPQOK9YGGA9TE7NvnOjobjubrIKwunG3IG8w&s",
     "url": "polytrack",
