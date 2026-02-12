@@ -35,6 +35,13 @@
     "new": true
   },
   {
+    "name": "Block Blast",
+    "image": "https://pbs.twimg.com/profile_images/1633774774886473729/ITiKebug_400x400.jpg",
+    "url": "block",
+    "proxy": false,
+    "new": true
+  },
+  {
     "name": "Hollow Knight",
     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg?t=1764916620",
     "url": "hollowknight",
@@ -148,7 +155,7 @@
   },
   {
     "name": "Celeste",
-    "image": "https://image.api.playstation.com/cdn/EP2120/CUSA11235_00/QIi3jKznLkAGV7iXnMhVMOw1F9tROkIC.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYnxW7Qlf2dh0xK2L7gXT5FkJj7eWexrnKNg&s",
     "url": "celeste",
     "proxy": false,
     "new": false
