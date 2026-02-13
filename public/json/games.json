@@ -28,6 +28,13 @@
     "new": true
   },
   {
+    "name": "Five Nights at Freddy's UCN",
+    "image": "https://image.api.playstation.com/vulcan/img/rnd/202104/2723/psrxE7pFEwTJqOVLuNqwm00N.png",
+    "url": "ucn",
+    "proxy": false,
+    "new": true
+  },
+  {
     "name": "YangJS Emulator",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbpOa3Y62wNQ-214jqI8vxXqsCHJ91LdRnwg&s",
     "url": "emulator",
