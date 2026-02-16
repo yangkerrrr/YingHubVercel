@@ -89,19 +89,6 @@ function renderGames(games) {
     img.alt = game.name;
     img.loading = "lazy";
 
-    if (game.proxy) {
-      img.src = game.image.startsWith("https://")
-        ? game.image
-        : `/media/games/${game.image}`;
-    } else {
-      if (game.image.startsWith("https://")) {
-        img.src = game.image;
-      } else {
-        const firstSegment = game.url.split("/")[0];
-        img.src = `/cdn/${firstSegment}/${game.image}`;
-      }
-    }
-
     gameItem.appendChild(img);
 
     const badgeContainer = document.createElement("div");
