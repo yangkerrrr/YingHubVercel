@@ -89,6 +89,14 @@ function renderGames(games) {
     img.alt = game.name;
     img.loading = "lazy";
 
+    // IMAGE SOURCE (fixed)
+if (game.image.startsWith("http://") || game.image.startsWith("https://")) {
+  img.src = game.image; // external image
+} else {
+  img.src = game.image; // local image like /media/icons/Terraria.jpg
+}
+
+
     gameItem.appendChild(img);
 
     const badgeContainer = document.createElement("div");
