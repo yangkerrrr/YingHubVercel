@@ -8,7 +8,7 @@
 
 </div>
 
-![Lunaar image](https://ibb.co/PG4DHCnM?.png)
+![Ying image](https://ibb.co/PG4DHCnM?.png)
 
 > [!IMPORTANT]
 > If you fork YingHub V7, please give it a star.
@@ -52,3 +52,5 @@ GROQ_API_KEY=your_actual_groq_api_key_here
 ```
 
 ## Issues
+
+<img src="https://yingnetwork.online/yingnetwork.png" height="60px">
