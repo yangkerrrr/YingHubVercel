@@ -31,6 +31,7 @@ Join our [Discord Server](example.com) for links and more!
 
 > [!IMPORTANT]
 > You cannot deploy Ying to a static host, such as GitHub Pages or Cloudflare Pages.
+> Refer to [YingHub V5](https://github.com/yangkerrrr/YingHub1) for github pages support.
 
 # 🤖 Ying AI
 
