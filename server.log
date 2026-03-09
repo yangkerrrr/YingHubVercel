@@ -1,0 +1,17 @@
+nohup: ignoring input
+
+> YingHub@7.0.0 start
+> node index.js
+
+(node:4238) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[dotenv@17.3.1] injecting env (5) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[ 🚀 ] YingHUb V7 is running at http://localhost:8080
+
+[ 🌙 ] Made by YingNetwork
+
+[ 🌙 ] Adapted to work on low RAM enviroment and low SWAP env by yang
+[ ⭐ ] Please Star on github
+
+[ 💻 ] Be sure to join our Discord for support:
+SIGTERM signal received: closing HTTP server

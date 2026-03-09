@@ -184,17 +184,6 @@ Promise.allSettled([
     searchInput.placeholder = `Search for ${allGames.length} games`;
     applyFilters();
 
-    fetch("/json/games-local.json")
-      .then((response) => response.json())
-      .then((cdnGames) => {
-        allGames = [...allGames, ...cdnGames];
-        searchInput.placeholder = `Search for ${allGames.length} games`;
-        applyFilters();
-      })
-      .catch((error) => {
-        console.error("Error loading CDN games:", error);
-        alert("Failed to load additional games from CDN.");
-      });
   })
   .catch((error) => {
     console.error("Unexpected error loading local games:", error);

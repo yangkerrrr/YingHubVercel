@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/ai" class="navbar-link"><span class="icon" aria-hidden="true"><i class="fas fa-robot"></i></span> <p class="navbar-text">AI</p></a>
         <a href="/math" class="navbar-link"><span class="icon" aria-hidden="true"><i class="fas fa-grid-2"></i></span> <p class="navbar-text">&#x41;&#x70;&#x70;&#x73;</p></a>
         <a href="/settings" class="navbar-link"><span class="icon" aria-hidden="true"><i class="fas fa-cog"></i></span> <p class="navbar-text">Settings</p></a>
-        <a href="/more" class="navbar-link"><span class="icon" aria-hidden="true"><i class="fas fa-plus"></i></span> <p class="navbar-text">More</p></a>
+        <a href="/player?dir=game/chat" class="navbar-link"><span class="icon" aria-hidden="true"><i class="fas fa-comments"></i></span> <p class="navbar-text">Discord</p></a>
     </div>
 </nav>
 `;
@@ -53,5 +53,59 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       container.innerHTML = navBar;
     }
+  }
+
+  // Notification subscribe button behavior
+  const notifyBtn = document.getElementById("enable-notifications");
+  if (notifyBtn) {
+    notifyBtn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      if (!('serviceWorker' in navigator)) return alert('Service workers not supported');
+
+      try {
+        const reg = await navigator.serviceWorker.register('/push-sw.js');
+
+        const permission = await Notification.requestPermission();
+        if (permission !== 'granted') return alert('Notification permission denied');
+
+        const resp = await fetch('/api/vapidPublicKey');
+        if (!resp.ok) throw new Error('VAPID key not available');
+        const { publicKey } = await resp.json();
+
+        function urlBase64ToUint8Array(base64String) {
+          const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+          const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+          const rawData = atob(base64);
+          const outputArray = new Uint8Array(rawData.length);
+          for (let i = 0; i < rawData.length; ++i) {
+            outputArray[i] = rawData.charCodeAt(i);
+          }
+          return outputArray;
+        }
+
+        const sub = await reg.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(publicKey),
+        });
+
+        console.log('Push subscription created:', sub);
+        const respSub = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(sub),
+        });
+        if (!respSub.ok) {
+          const txt = await respSub.text();
+          throw new Error('subscribe failed: ' + (txt || respSub.statusText));
+        }
+
+        const j = await respSub.json().catch(() => null);
+        console.log('subscribe endpoint response:', j);
+        alert('Subscribed to push notifications');
+      } catch (err) {
+        console.error('Subscribe error', err);
+        alert('Could not subscribe: ' + (err && err.message));
+      }
+    });
   }
 });

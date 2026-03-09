@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +15,8 @@
   <script src="../js/cloak.js"></script>
 
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -24,12 +26,14 @@
     .navbar-container {
       position: relative;
       z-index: 1000;
-      height: 60px; /* adjust if your navbar is taller */
+      height: 60px;
+      /* adjust if your navbar is taller */
     }
 
     #gameContainer {
       position: absolute;
-      top: 60px; /* same as navbar height */
+      top: 60px;
+      /* same as navbar height */
       left: 0;
       right: 0;
       bottom: 0;
@@ -85,9 +89,10 @@
       alert("No game specified");
     } else {
       const folder = dir.replace(/^game\//, "");
-      const gameUrl = `https://clappedware.github.io/YingHub/game/${folder}/`;
+      const gameUrl = `https://storage.yangplace.qzz.io//${folder}/`;
       iframe.src = gameUrl;
     }
   </script>
 </body>
+
 </html>

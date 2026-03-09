@@ -6,5 +6,13 @@
     "new": false,
     "top": true,
     "proxy": false
+  },
+  {
+    "name": "Discord Clone",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzBLaLqWJZBXlMzkbnTETwPP0W89GdLjt-CA&s",
+    "url": "chat",
+    "new": true,
+    "top": true,
+    "proxy": false
   }
 ]

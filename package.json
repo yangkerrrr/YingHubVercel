@@ -28,7 +28,8 @@
     "express": "^4.21.2",
     "http-proxy": "^1.18.1",
     "node-fetch": "^3.3.2",
-    "pnpm": "^10.29.3"
+    "pnpm": "^10.29.3",
+    "web-push": "^3.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22",

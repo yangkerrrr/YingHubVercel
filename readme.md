@@ -8,7 +8,7 @@
 
 </div>
 
-![Ying image](https://ibb.co/PG4DHCnM?.png)
+![Lunaar image](https://ibb.co/PG4DHCnM?.png)
 
 > [!IMPORTANT]
 > If you fork YingHub V7, please give it a star.
@@ -31,7 +31,6 @@ Join our [Discord Server](example.com) for links and more!
 
 > [!IMPORTANT]
 > You cannot deploy Ying to a static host, such as GitHub Pages or Cloudflare Pages.
-> Refer to [YingHub V5](https://github.com/yangkerrrr/YingHub1) for github pages support.
 
 # 🤖 Ying AI
 
@@ -52,5 +51,3 @@ GROQ_API_KEY=your_actual_groq_api_key_here
 ```
 
 ## Issues
-
-<img src="https://yingnetwork.online/yingnetwork.png" height="60px">
