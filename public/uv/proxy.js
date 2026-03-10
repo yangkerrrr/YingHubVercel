@@ -27,7 +27,7 @@ const wispUrl =
   "://" +
   location.host +
   "/wisp/";
-const bareUrl = location.protocol + "//" + location.host + "/bare/";
+const bareUrl = "https://shuttleproxy.com/bare/";
 var transport = localStorage.getItem("transport");
 if (!transport) {
   transport = "libcurl";

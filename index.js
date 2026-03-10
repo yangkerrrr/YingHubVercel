@@ -1,5 +1,4 @@
 import { server as wisp } from "@mercuryworkshop/wisp-js/server";
-import { createBareServer } from "@tomphttp/bare-server-node";
 import httpProxy from "http-proxy";
 import chalk from "chalk";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
@@ -28,7 +27,6 @@ Object.assign(wisp.options, {
 });
 
 const cdnProxy = httpProxy.createProxyServer();
-const bare = createBareServer("/bare/");
 const __dirname = join(fileURLToPath(import.meta.url), "..");
 let dynamicSystemPrompt = "";
 let lastWebhookPayload = null;
@@ -710,18 +708,12 @@ app.get("*", (req, res) => {
 const server = createServer();
 
 server.on("request", (req, res) => {
-  if (bare.shouldRoute(req)) {
-    bare.routeRequest(req, res);
-  } else {
-    app(req, res);
-  }
+  app(req, res);
 });
 
 server.on("upgrade", (req, socket, head) => {
   if (req.url.endsWith("/wisp/")) {
     wisp.routeRequest(req, socket, head);
-  } else if (bare.shouldRoute(req)) {
-    bare.routeUpgrade(req, socket, head);
   } else {
     socket.end();
   }
@@ -762,7 +754,6 @@ process.on("SIGTERM", shutdown);
 function shutdown() {
   console.log("SIGTERM signal received: closing HTTP server");
   server.close();
-  bare.close();
   process.exit(0);
 }
 

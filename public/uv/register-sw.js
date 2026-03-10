@@ -1,5 +1,5 @@
 const stockSW = "/uv/sw.js";
-const swAllowedHostnames = ["localhost", "127.0.0.1"];
+const swAllowedHostnames = ["localhost", "127.0.0.1", "https://shuttleproxy.com/bare/"];
 
 async function registerSW() {
   if (!navigator.serviceWorker) {
